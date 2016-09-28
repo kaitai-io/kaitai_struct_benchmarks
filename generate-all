@@ -1,0 +1,13 @@
+#!/bin/bash
+
+. ./config
+export DATA_DIR=$(pwd)/$DATA_DIR
+
+do_generate()
+{
+	echo -n "Generating $1... "
+	time generate/gen_$1
+}
+
+do_generate benchmark_process_xor
+do_generate ext2
