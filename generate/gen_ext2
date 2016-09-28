@@ -1,0 +1,7 @@
+#!/bin/sh -ef
+
+SIZE_BLOCKS=$((64 * 1024))
+DAT="$DATA_DIR/ext2.dat"
+
+dd if=/dev/zero "of=$DAT" bs=1024 count=$SIZE_BLOCKS
+/sbin/mkfs.ext2 "$DAT"
