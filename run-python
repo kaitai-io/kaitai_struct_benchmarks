@@ -1,0 +1,13 @@
+#!/bin/sh
+
+. ./config
+export DATA_DIR=$(pwd)/$DATA_DIR
+
+run_python()
+{
+	echo "== $@"
+	PYTHONPATH="$PYTHON_RUNTIME_DIR:compiled/python" python "spec/python/$@"
+}
+
+run_python run_benchmark_process_xor.py
+run_python run_ext2.py
