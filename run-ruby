@@ -1,0 +1,11 @@
+#!/bin/sh
+
+. ./config
+export DATA_DIR=$(pwd)/$DATA_DIR
+
+run_ruby()
+{
+	ruby -I compiled/ruby spec/ruby/$@
+}
+
+run_ruby run_benchmark_process_xor.rb
