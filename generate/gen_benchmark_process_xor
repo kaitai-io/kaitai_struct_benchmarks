@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+N = 100
+SIZE_MAX = 1600000 / 4
+
+File.open('../data/benchmark_process_xor.dat', 'w') { |f|
+  N.times {
+    len = rand(SIZE_MAX) * 4
+    f.write([len].pack('V'))
+    body = File.binread('/dev/urandom', len)
+    f.write(body)
+  }
+}
