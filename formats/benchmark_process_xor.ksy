@@ -19,4 +19,3 @@ types:
       - id: numbers
         type: s4
         repeat: eos
-
