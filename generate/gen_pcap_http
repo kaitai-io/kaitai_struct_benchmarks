@@ -1,0 +1,9 @@
+#!/bin/sh -ef
+
+rm -f \
+	"$DATA_DIR/c05-http-reply-r1.pcap.gz" \
+	"$DATA_DIR/c05-http-reply-r1.pcap"
+
+wget -O "$DATA_DIR/c05-http-reply-r1.pcap.gz" 'https://wiki.wireshark.org/SampleCaptures?action=AttachFile&do=get&target=c05-http-reply-r1.pcap.gz'
+gunzip $DATA_DIR/c05-http-reply-r1.pcap.gz
+mv $DATA_DIR/c05-http-reply-r1.pcap $DATA_DIR/pcap_http.dat
