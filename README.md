@@ -1,7 +1,7 @@
 # Kaitai Struct: benchmarks
 
 This repository contains benchmarking suite for 
-[Kaitai Structures](https://github.com/kaitai-io/kaitai_struct) project.
+[Kaitai Struct](https://github.com/kaitai-io/kaitai_struct) project.
 
 ## Compile format specs (.ksy) into target languages
 
