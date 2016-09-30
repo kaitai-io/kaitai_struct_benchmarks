@@ -11,3 +11,4 @@ run_python()
 
 run_python run_benchmark_process_xor.py
 run_python run_ext2.py
+run_python run_pcap.py
