@@ -149,12 +149,9 @@ types:
       - id: tcp_segment_body
         type: tcp_segment
         if: protocol == protocol::tcp
-      - id: icmp_body
-        type: icmp_packet
-        if: protocol == protocol::icmp
       - id: body
         size: total_length - ihl_bytes
-        if: protocol != protocol::tcp and protocol != protocol::icmp
+        if: protocol != protocol::tcp
     instances:
       version:
         value: (b1 & 0xf0) >> 4
@@ -207,7 +204,7 @@ types:
 enums:
   linktype:
     # http://www.tcpdump.org/linktypes.html
-    0: null
+    0: null_linktype
     1: ethernet
     3: ax25
     6: ieee802_5
@@ -364,7 +361,7 @@ enums:
     31: mfe_nsp
     32: merit_inp
     33: dccp
-    34: 3pc
+    34: protocol_3pc
     35: idpr
     36: xtp
     37: ddp
