@@ -15,7 +15,7 @@ public class TestBenchmarkProcessXor extends Benchmark {
 
     @Override
     public void testLoad() throws IOException {
-        BenchmarkProcessXor r = BenchmarkProcessXor.fromFile(dataFileName());
+        r = BenchmarkProcessXor.fromFile(dataFileName());
     }
 
     @Override
