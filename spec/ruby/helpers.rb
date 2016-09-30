@@ -20,6 +20,6 @@ class Series
   end
 
   def stdev
-    Math.sqrt((@count * @sum2 - @sum * sum) / (@count * (@count - 1)))
+    Math.sqrt((@count * @sum2 - @sum * @sum) / (@count * (@count - 1)))
   end
 end
