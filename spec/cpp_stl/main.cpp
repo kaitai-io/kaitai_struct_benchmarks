@@ -4,6 +4,7 @@
 
 void test_benchmark_process_xor();
 void test_ext2();
+void test_pcap();
 
 struct benchmark_case {
     std::string name;
@@ -18,6 +19,10 @@ benchmark_case benchmarks[] = {
     {
         .name = std::string("ext2"),
         .test_func = test_ext2,
+    },
+    {
+        .name = std::string("pcap"),
+        .test_func = test_pcap,
     },
 };
 

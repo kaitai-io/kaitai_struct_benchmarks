@@ -12,11 +12,13 @@ set(SPEC_SOURCES
 	main.cpp
 	run_benchmark_process_xor.cpp
 	run_ext2.cpp
+	run_pcap.cpp
 )
 
 set(KS_SOURCES
 	${KS_PATH}/benchmark_process_xor.cpp
 	${KS_PATH}/ext2.cpp
+	${KS_PATH}/pcap.cpp
 )
 
 set(RUNTIME_SOURCES
