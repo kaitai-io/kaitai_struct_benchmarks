@@ -20,5 +20,5 @@ for packet in r.packets:
 
 t3 = timer()
 
-print(t2 - t1)
-print(t3 - t2)
+print("parsing: %s seconds" % (t2-t1,))
+print("processing: %s seconds" % (t3-t2,))
