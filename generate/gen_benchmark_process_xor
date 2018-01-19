@@ -5,9 +5,8 @@ CHUNK = 1600000
 
 File.open("#{ENV['DATA_DIR']}/benchmark_process_xor.dat", 'w') { |f|
     N.times {
-        len = CHUNK
-        f.write([len].pack('V'))
-        body = File.binread('/dev/zero', len)
+        f.write([CHUNK].pack('V'))
+        body = File.binread('/dev/zero', CHUNK)
         f.write(body)
     }
 }

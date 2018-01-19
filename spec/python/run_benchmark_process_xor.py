@@ -10,9 +10,10 @@ r = BenchmarkProcessXor.from_file("%s/benchmark_process_xor.dat" % os.environ['D
 
 t2 = timer()
 
+sum = 0
 for chunk in r.chunks:
     for n in chunk.body.numbers:
-        pass
+        sum += n
 
 t3 = timer()
 
