@@ -6,7 +6,7 @@ export DATA_DIR=$(pwd)/$DATA_DIR
 run_ruby()
 {
 	echo "== $@"
-	ruby -I compiled/ruby:../runtime/ruby/lib spec/ruby/$@
+	ruby -I "$RUBY_RUNTIME_DIR:compiled/ruby" spec/ruby/$@
 }
 
 run_ruby run_benchmark_process_xor.rb
