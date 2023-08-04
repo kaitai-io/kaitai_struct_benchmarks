@@ -8,10 +8,10 @@ seq:
 types:
   chunk:
     seq:
-      - id: len
+      - id: len_body
         type: u4
       - id: body
-        size: len
+        size: len_body
         process: xor(0xaa)
         type: integers
   integers:
